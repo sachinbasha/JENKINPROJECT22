@@ -12,7 +12,9 @@ public class Tc1Test
 	{
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://www.amazon.com/");
-	   System.out.println(driver.getCurrentUrl());
+	   
+	   System.out.println("script workin sucsesfully");
+	   
 	}
 
 }
