@@ -8,7 +8,11 @@ public class Tc2Test
 	@Test
 	public void test()
 	{
-		Reporter.log("testcase2",true);
+		String BROWSER = System.getProperty("browser");
+		String URL = System.getProperty("url");
+		System.out.println(BROWSER);
+		System.out.println(URL);
+		
 	}
 
 }
