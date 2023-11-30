@@ -5,13 +5,17 @@ import org.testng.annotations.Test;
 
 public class Tc2Test
 {
-	@Test
-	public void test()
+	@Test(groups="regression")
+	public void test3()
 	{
-		String BROWSER = System.getProperty("browser");
-		String URL = System.getProperty("url");
-		System.out.println(BROWSER);
-		System.out.println(URL);
+		System.out.println("regression 2");
+		
+		
+	}
+	@Test(groups="smoke")
+	public void test4()
+	{
+		System.out.println("smokeTest 2");
 		
 	}
 

@@ -7,14 +7,17 @@ import org.testng.annotations.Test;
 
 public class Tc1Test
 {
-	@Test
+	@Test(groups="smoke")
 	public void test1()
 	{
-		WebDriver driver=new ChromeDriver();
-		driver.get("https://www.amazon.com/");
-	   
-	   System.out.println("script workin sucsesfully");
-	   
+	
+	    System.out.println("smoketest 1");
+	}
+	@Test(groups="regression")
+	public void test2()
+	{
+	
+	    System.out.println("regression 1");
 	}
 
 }

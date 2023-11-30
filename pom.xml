@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
 	<profiles>
 		<profile>
-			<id></id>
+			<id>smoke</id>
 			<build>
 				<plugins>
 					<plugin>
@@ -14,7 +14,25 @@
 						<version>3.2.2</version>
 						<configuration>
 							<suiteXmlFiles>
-								<suiteXmlFile>testng.xml</suiteXmlFile>
+								<suiteXmlFile>smoke.xml</suiteXmlFile>
+							</suiteXmlFiles>
+						</configuration>
+					</plugin>
+					
+				</plugins>
+			</build>
+		</profile>
+		<profile>
+			<id>regression</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-surefire-plugin</artifactId>
+						<version>3.2.2</version>
+						<configuration>
+							<suiteXmlFiles>
+								<suiteXmlFile>regression.xml</suiteXmlFile>
 							</suiteXmlFiles>
 						</configuration>
 					</plugin>
@@ -23,6 +41,11 @@
 		</profile>
 	</profiles>
 	<dependencies>
+		<dependency>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.8.1</version>
+</dependency>
 		<dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
